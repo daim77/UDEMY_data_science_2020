@@ -52,8 +52,9 @@ def stat_oper(data_dict):
             temp_list = [convert_f_c(int(temp)) for temp in data_dict[city]['F']]
         else:
             temp_list = [int(temp) for temp in data_dict[city]['C']]
-            avg = statistics.mean(temp_list)
-            print(temp_list, avg)
+        print(city, temp_list)
+        # avg = statistics.mean(temp_list)
+        # result_dict.update({city: avg})
     return result_dict
 
 
@@ -67,9 +68,9 @@ def main():
     data_dict = build_dict(data_list)
     result_dict = stat_oper(data_dict)
 
-    print(data_list)
-    pp(data_dict)
-    pp(result_dict)
+    # print(data_list)
+    # pp(data_dict)
+    # pp(result_dict)
 
 
 main()
