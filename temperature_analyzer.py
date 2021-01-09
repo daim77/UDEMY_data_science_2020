@@ -40,7 +40,7 @@ def build_dict(data_list):
 def stat_oper(data_dict):
     # [°C] = ([°F] − 32) × 5⁄9
     # [°F] = [°C] × 9⁄5 + 32
-    result_dict = {'city name': ['average temp', 'median temp']}
+    result_dict = {}
     city_list = [city for city in data_dict]
     for city in city_list:
         if len(data_dict[city]) > 1:
@@ -66,11 +66,12 @@ def convert_f_c(temp):
 
 
 def output(result_dict):
-    print('\nAll temperature in Ceslisu\n' + '=' * 60)
+    print('\nAll temperatures in Ceslisu\n' + '=' * 94)
+    print('|{:^30}|{:^30}|{:^30}|'.format('City name', 'Average temp', 'Median temp'))
+    print('=' * 94)
     for city in result_dict:
-        print('{:^30}'.format(city))
-        for temp in result_dict[city]:
-            print(temp)
+        print('|{:^30}|{:^30}|{:^30}|'.format(city, result_dict[city][0], result_dict[city][1]))
+    print('=' * 94)
 
 
 def main():
