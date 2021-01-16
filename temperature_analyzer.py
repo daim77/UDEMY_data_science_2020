@@ -66,7 +66,7 @@ def convert_f_c(temp):
 
 
 def output(result_dict):
-    print('\nAll temperatures in Ceslisu\n' + '=' * 94)
+    print('\nAll temperatures in Ceslisus\n' + '=' * 94)
     print('|{:^30}|{:^30}|{:^30}|'.format('City name', 'Average temp', 'Median temp'))
     print('=' * 94)
     for city in result_dict:
